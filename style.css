@@ -1,0 +1,276 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #000000;
+  background-color: #000000;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #000000;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/*----------------------HEADER-------------------------------------------------------------*/
+
+.header {
+  width: 100%;
+  background-color: #FFA500;
+}
+
+.header__container {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header__logo-text {
+  padding: auto;
+  padding-left: 40px;
+  font-size: 32px;
+  background-image: url('./assets/svg/logo.svg');
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 30px 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header__logo-text:hover {
+  filter: invert(100%) sepia(0%) saturate(7479%) hue-rotate(239deg) brightness(104%) contrast(100%);
+}
+
+.header__search {
+  position: relative;
+  width: 330px;
+  margin-left: 20px;
+}
+
+.search__inp {
+  width: 100%;
+  padding: 5px 45px 5px 15px;
+  font-size: 18px;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #dbd3d3;
+}
+
+.search__inp:focus {
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.2);
+}
+
+.search__btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search__btn::before {
+  content: "\f002";
+  font-family: FontAwesome;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+.search__btn:hover::before {
+  color: #FFA500;
+}
+
+/*----------------------MAIN---------------------------------------------------------------*/
+
+.main {
+  flex: 1 1 auto;
+}
+
+.main__grid {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-img {
+  position: relative;
+  width: 380px;
+  height: 250px;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-text {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: 700;
+  border-top-right-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7)
+}
+
+.main-img:hover {
+  transform: scale(1.05);
+}
+
+.main-img:hover .main-text {
+  display: block;
+}
+
+@media (max-width: 1279px) {
+  .main-img {
+    width: 320px;
+    height: 200px;
+  }
+
+  .main__grid {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 739px) {
+  .main-img {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 700px) {
+  .header__container {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 489px) {
+  .main-img {
+    width: 340px;
+    height: 220px;
+  }
+}
+
+/*----------------------FOOTER-------------------------------------------------------------*/
+
+.footer {
+  background-color: #FFA500;
+}
+
+.footer__container {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer__data {
+  display: flex;
+  align-items: center;
+}
+
+.footer__year {
+  padding: 0 20px;
+}
+
+.footer__github {
+  transition: 0.3s;
+}
+
+.footer__github:hover {
+  color: #ffffff;
+  ;
+}
+
+.rsschool__link {
+  width: 135px;
+  height: 50px;
+  background: url('./assets/svg/rss.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rsschool__link:hover {
+  filter: invert(100%) sepia(0%) saturate(7479%) hue-rotate(239deg) brightness(104%) contrast(100%);
+}
